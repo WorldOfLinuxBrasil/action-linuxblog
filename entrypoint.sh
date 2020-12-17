@@ -32,7 +32,6 @@ REPOSITORY_PATH="https://x-access-token:${PERSONAL_TOKEN}@github.com/${PRO_REPOS
 # deploy to 
 echo "Deploy to ${PRO_REPOSITORY}"
 
-# Installs Git and j
 
 
 # Directs the action to the the Github workspace.
@@ -57,6 +56,8 @@ git init
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git remote add origin "${ORIGIN}"
+mkdir .ssh
+echo "${DEPLOY_SSH}" >> .ssh/id_rsa
 # Checks to see if the remote exists prior to deploying.
 # If the branch doesn't exist it gets created here as an orphan.
 # if [ "$(git ls-remote --heads "$REPOSITORY_PATH" "$BRANCH" | wc -l)" -eq 0 ];
