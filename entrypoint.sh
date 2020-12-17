@@ -56,7 +56,7 @@ echo "Config git ..."
 git init
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-
+git remote add origin "${ORIGIN}"
 # Checks to see if the remote exists prior to deploying.
 # If the branch doesn't exist it gets created here as an orphan.
 # if [ "$(git ls-remote --heads "$REPOSITORY_PATH" "$BRANCH" | wc -l)" -eq 0 ];
@@ -73,6 +73,6 @@ echo 'Start Commit'
 git commit --allow-empty -m "Deploying to ${BRANCH}"
 
 echo 'Start Push'
-git push git@github.com:WorldOfLinuxBrasil/linuxblog.git "${BRANCH}" --force
+git push origin "${BRANCH}" --force
 
 echo "Deployment succesful!"
