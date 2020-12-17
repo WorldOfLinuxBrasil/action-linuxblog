@@ -1,0 +1,9 @@
+name: 'Hexo Deploy Action w/ emacs and pandoc support'
+description: 'This GitHub action will handle the building and deploying process of hexo project and handle Emacs`s org mode and Pandocs`s latex.'
+author: 'fnxln'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'git-commit'
+  color: 'orange'
