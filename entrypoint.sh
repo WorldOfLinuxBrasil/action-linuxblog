@@ -73,6 +73,6 @@ echo 'Start Commit'
 git commit --allow-empty -m "Deploying to ${BRANCH}"
 
 echo 'Start Push'
-git push  --set-upstream "${BRANCH}" "${BRANCH}" --force
+git push origin "${BRANCH}" --force
 
 echo "Deployment succesful!"
