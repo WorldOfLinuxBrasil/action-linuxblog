@@ -73,6 +73,6 @@ echo 'Start Commit'
 git commit --allow-empty -m "Deploying to ${BRANCH}"
 
 echo 'Start Push'
-git push origin "${PUBLISH_REPOSITORY}" "${BRANCH}" --force
+git push origin git@github.com:WorldOfLinuxBrasil/linuxblog.git "${BRANCH}" --force
 
 echo "Deployment succesful!"
