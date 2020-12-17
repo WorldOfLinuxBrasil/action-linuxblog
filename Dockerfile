@@ -1,7 +1,7 @@
 # Container tha runs the code
 FROM node:alpine
 # Install dependencies (emacs and Pandoc)
-RUN apk update && apk add emacs
+RUN apk update && apk add emacs git
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
 
